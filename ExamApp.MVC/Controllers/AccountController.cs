@@ -24,10 +24,10 @@ namespace ExamApp.MVC.Controllers
         [HttpPost]
         public async Task <IActionResult> Register(RegisterVM registerVM)
         {
-            if(!ModelState.IsValid)
-            {
-                return View();
-            }
+            //if(!ModelState.IsValid)
+            //{
+            //    return View();
+            //}
               _service.Register(registerVM);
             return RedirectToAction("Index" , "Home");
         }
